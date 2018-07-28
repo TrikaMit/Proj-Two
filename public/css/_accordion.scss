@@ -1,0 +1,118 @@
+.accordion-toggle {
+    background-color: #6290C3;
+    color: #1A1B41;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: .5s;
+}
+
+.accordion-toggle:after {
+    content: "\02795";
+    font-size: .875rem;
+    color: #1A1B41;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion-toggle:hover,
+.active {
+    background-color: #C2E7DA;
+}
+
+.active:after {
+    content: "\2796";
+}
+
+.panel {
+    padding: 0 1rem;
+    background-color: #FFF;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .3s ease-out;
+}
+
+
+$unchecked-star: '\2606';
+$unchecked-color: #888;
+$checked-star: '\2605';
+$checked-color: goldenrod;
+.star-cb-group {
+    /* remove inline-block whitespace */
+    font-size: 0;
+    * {
+        font-size: 1rem;
+    }
+    /* flip the order so we can use the + and ~ combinators */
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    &>input {
+        display: none;
+        &+label {
+            /* only enough room for the star */
+            display: inline-block;
+            overflow: hidden;
+            text-indent: 9999px;
+            width: 1em;
+            white-space: nowrap;
+            cursor: pointer;
+            &:before {
+                display: inline-block;
+                text-indent: -9999px;
+                content: $unchecked-star;
+                color: $unchecked-color;
+            }
+        }
+        &:checked~label:before,
+        &+label:hover~label:before,
+        &+label:hover:before {
+            content: $checked-star;
+            color: goldenrod;
+            text-shadow: 0 0 1px #333;
+        }
+    }
+    /* the hidden clearer */
+    &>.star-cb-clear+label {
+        text-indent: -9999px;
+        width: .5em;
+        margin-left: -.5em;
+    }
+    &>.star-cb-clear+label:before {
+        width: .5em;
+    }
+    &:hover>input+label:before {
+        content: $unchecked-star;
+        color: $unchecked-color;
+        text-shadow: none;
+    }
+    &:hover>input+label:hover~label:before,
+    &:hover>input+label:hover:before {
+        content: $checked-star;
+        color: $checked-color;
+        text-shadow: 0 0 1px #333;
+    }
+}
+
+
+fieldset {
+    border: 0;
+    border-radius: 1px;
+    padding: 1em 1.5em 0.9em;
+    margin: 1em auto;
+}
+
+#log {
+    margin: 1em auto;
+    width: 5em;
+    text-align: center;
+    background: transparent;
+}
+
+.add-to-your-shelf-button {
+    background-color:inherit;
+    border:none;
+}
