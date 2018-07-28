@@ -1,7 +1,4 @@
-* {
-  background-color: blue;
-}
-
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -262,8 +259,114 @@ template {
   overflow: hidden;
 }
 
-* {
-  background-color: blue;
+.accordion-toggle {
+  background-color: #6290C3;
+  color: #1A1B41;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.5s;
+}
+
+.accordion-toggle:after {
+  content: "➕";
+  font-size: 0.875rem;
+  color: #1A1B41;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion-toggle:hover,
+.active {
+  background-color: #C2E7DA;
+}
+
+.active:after {
+  content: "➖";
+}
+
+.panel {
+  padding: 0 1rem;
+  background-color: #FFF;
+  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.star-cb-group {
+  /* remove inline-block whitespace */
+  font-size: 0;
+  /* flip the order so we can use the + and ~ combinators */
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  /* the hidden clearer */
+}
+.star-cb-group * {
+  font-size: 1rem;
+}
+.star-cb-group > input {
+  display: none;
+}
+.star-cb-group > input + label {
+  /* only enough room for the star */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 9999px;
+  width: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.star-cb-group > input + label:before {
+  display: inline-block;
+  text-indent: -9999px;
+  content: "☆";
+  color: #888;
+}
+.star-cb-group > input:checked ~ label:before, .star-cb-group > input + label:hover ~ label:before, .star-cb-group > input + label:hover:before {
+  content: "★";
+  color: goldenrod;
+  text-shadow: 0 0 1px #333;
+}
+.star-cb-group > .star-cb-clear + label {
+  text-indent: -9999px;
+  width: 0.5em;
+  margin-left: -0.5em;
+}
+.star-cb-group > .star-cb-clear + label:before {
+  width: 0.5em;
+}
+.star-cb-group:hover > input + label:before {
+  content: "☆";
+  color: #888;
+  text-shadow: none;
+}
+.star-cb-group:hover > input + label:hover ~ label:before, .star-cb-group:hover > input + label:hover:before {
+  content: "★";
+  color: goldenrod;
+  text-shadow: 0 0 1px #333;
+}
+
+fieldset {
+  border: 0;
+  border-radius: 1px;
+  padding: 1em 1.5em 0.9em;
+  margin: 1em auto;
+}
+
+#log {
+  margin: 1em auto;
+  width: 5em;
+  text-align: center;
+  background: transparent;
+}
+
+.add-to-your-shelf-button {
+  background-color: inherit;
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
