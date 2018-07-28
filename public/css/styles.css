@@ -1,3 +1,12 @@
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
 hr {
 background-color: black;
 border-width:0;
@@ -7,14 +16,6 @@ line-height:0;
 margin:auto;
 text-align:center;
 width:80%;
-}
-
-h1{
-    text-align: center;
-}
-
-h2{
-    text-align: center;
 }
 
 
