@@ -22,6 +22,8 @@ request(`https://lcboapi.com/products?access_key=${process.env.ACCESS_KEY}&q=${q
   console.log(body.result[0])
 })
 
+
+
 // db.sequelize.sync({ force: true }).then(function () {
 //     app.listen(PORT, function () {
 //         console.log('App listening on PORT ' + PORT);

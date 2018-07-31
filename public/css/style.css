@@ -1,4 +1,24 @@
 @charset "UTF-8";
+.dark-blue {
+  color: #283143;
+}
+
+.medium-dark-blue {
+  color: #43617D;
+}
+
+.medium-blue {
+  color: #5A8DAB;
+}
+
+.light-blue {
+  color: #B5D3DB;
+}
+
+.grey {
+  color: #DAD2C7;
+}
+
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -260,7 +280,7 @@ template {
 }
 
 .accordion-toggle {
-  background-color: #6290C3;
+  background-color: #283143;
   color: #1A1B41;
   cursor: pointer;
   padding: 1rem;
@@ -279,18 +299,13 @@ template {
   margin-left: 5px;
 }
 
-.accordion-toggle:hover,
-.active {
-  background-color: #C2E7DA;
-}
-
 .active:after {
   content: "➖";
 }
 
 .panel {
   padding: 0 1rem;
-  background-color: #FFF;
+  background-color: white;
   display: none;
   overflow: hidden;
   max-height: 0;
@@ -298,12 +313,9 @@ template {
 }
 
 .star-cb-group {
-  /* remove inline-block whitespace */
   font-size: 0;
-  /* flip the order so we can use the + and ~ combinators */
   unicode-bidi: bidi-override;
   direction: rtl;
-  /* the hidden clearer */
 }
 .star-cb-group * {
   font-size: 1rem;
@@ -312,7 +324,6 @@ template {
   display: none;
 }
 .star-cb-group > input + label {
-  /* only enough room for the star */
   display: inline-block;
   overflow: hidden;
   text-indent: 9999px;
@@ -367,6 +378,29 @@ fieldset {
 .add-to-your-shelf-button {
   background-color: inherit;
   border: none;
+}
+
+* {
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+.align-center {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.align-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+#result-image {
+  max-width: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
