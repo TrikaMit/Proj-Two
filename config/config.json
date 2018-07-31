@@ -10,7 +10,7 @@
     "test": {
         "username": "test",
         "password": "password",
-        "database": "database_test",
+        "database": "blogger",
         "host": "127.0.0.1",
         "port": 3306,
         "dialect": "mysql"
@@ -18,7 +18,7 @@
     "production": {
         "username": "test",
         "password": "password",
-        "database": "database_production",
+        "database": "blogger",
         "host": "127.0.0.1",
         "port": 3306,
         "dialect": "mysql"
