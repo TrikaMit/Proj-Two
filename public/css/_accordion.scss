@@ -1,5 +1,5 @@
 .accordion-toggle {
-    background-color: #6290C3;
+    background-color: #283143;
     color: #1A1B41;
     cursor: pointer;
     padding: 1rem;
@@ -10,6 +10,7 @@
     transition: .5s;
 }
 
+
 .accordion-toggle:after {
     content: "\02795";
     font-size: .875rem;
@@ -18,10 +19,10 @@
     margin-left: 5px;
 }
 
-.accordion-toggle:hover,
-.active {
-    background-color: #C2E7DA;
-}
+// .accordion-toggle:hover,
+// .active {
+//     background-color: #C2E7DA;
+// }
 
 .active:after {
     content: "\2796";
@@ -29,7 +30,7 @@
 
 .panel {
     padding: 0 1rem;
-    background-color: #FFF;
+    background-color:rgba(255, 255, 255, 40);
     display: none;
     overflow: hidden;
     max-height: 0;
@@ -42,18 +43,17 @@ $unchecked-color: #888;
 $checked-star: '\2605';
 $checked-color: goldenrod;
 .star-cb-group {
-    /* remove inline-block whitespace */
+
     font-size: 0;
     * {
         font-size: 1rem;
     }
-    /* flip the order so we can use the + and ~ combinators */
     unicode-bidi: bidi-override;
     direction: rtl;
     &>input {
         display: none;
         &+label {
-            /* only enough room for the star */
+
             display: inline-block;
             overflow: hidden;
             text-indent: 9999px;
@@ -75,7 +75,7 @@ $checked-color: goldenrod;
             text-shadow: 0 0 1px #333;
         }
     }
-    /* the hidden clearer */
+
     &>.star-cb-clear+label {
         text-indent: -9999px;
         width: .5em;

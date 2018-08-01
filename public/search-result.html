@@ -14,14 +14,15 @@
 </style>
 </head>
 <body>
-    <main>
-        <figure class="result-image-div">
-            <img id="result-image" src="" alt="">
-            <figcaption id="result-name"></figcaption>
+    <main class="align-center">
+        <figure class="result-image-div align-center margin-auto">
+            <img id="result-image" src="http://placekitten.com/g/900/900" alt="">
+            <figcaption id="result-name">Placeholder Text</figcaption>
         </figure>
-        <div class="accordion-toggle">
-            <i class="fas fa-wine-glass-alt"></i>
-            <button class="add-to-your-shelf-button">Add to Your Top Shelf</button>
+
+        <div class="accordion-toggle align-row">
+            <i class="fas fa-wine-glass-alt grey"></i>
+            <button class="add-to-your-shelf-button grey">Add to Your Top Shelf</button>
         </div>
 
         <section class="panel">
@@ -47,12 +48,14 @@
             <form>
                 <label for="review">Review:</label>
                 <input type="text" id="review">
-                <input type="submit" value="Add to Your Top Shelf">
+                <input type="submit" value="Add to Your Top Shelf" id="submit-button">
             </form>
         </section>
 
 
     </main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
 <script>
     var accordion = document.getElementsByClassName("accordion-toggle");
