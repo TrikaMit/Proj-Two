@@ -4,12 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/style.css">
     <title>Search Result</title>
+<style>
+
+</style>
 </head>
 <body>
+    <main class="align-center">
+        <figure class="result-image-div align-center margin-auto">
+            <img id="result-image" src="http://placekitten.com/g/900/900" alt="">
+            <figcaption id="result-name">Placeholder Text</figcaption>
+        </figure>
+
+        <div class="accordion-toggle align-row">
+            <i class="fas fa-wine-glass-alt grey"></i>
+            <button class="add-to-your-shelf-button grey">Add to Your Top Shelf</button>
+        </div>
+
+        <section class="panel">
+            <form>
+                <fieldset>
+                    <span class="star-cb-group">
+                        <input type="radio" id="rating-5" name="rating" value="5" />
+                        <label for="rating-5">5</label>
+                        <input type="radio" id="rating-4" name="rating" value="4" checked="checked" />
+                        <label for="rating-4">4</label>
+                        <input type="radio" id="rating-3" name="rating" value="3" />
+                        <label for="rating-3">3</label>
+                        <input type="radio" id="rating-2" name="rating" value="2" />
+                        <label for="rating-2">2</label>
+                        <input type="radio" id="rating-1" name="rating" value="1" />
+                        <label for="rating-1">1</label>
+                        <input type="radio" id="rating-0" name="rating" value="0" class="star-cb-clear" />
+                        <label for="rating-0">0</label>
+                    </span>
+                </fieldset>
+            </form>
+
+            <form>
+                <label for="review">Review:</label>
+                <input type="text" id="review">
+                <input type="submit" value="Add to Your Top Shelf" id="submit-button">
+            </form>
+        </section>
 
 
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+<script>
+    var accordion = document.getElementsByClassName("accordion-toggle");
+
+    for (var i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+</script>
 
 </body>
 </html>
