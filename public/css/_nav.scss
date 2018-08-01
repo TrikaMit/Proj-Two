@@ -49,7 +49,7 @@ li a, .dropbtn {
 
 li a:hover, .dropdown:hover .dropbtn {
     background-color: #5A8DAB;
-    color: #ffff;
+    color: #f1f1f1;
 }
 
 li.dropdown {
@@ -77,7 +77,7 @@ li.dropdown {
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: #f1f1f1;
 }
 
 .dropdown:hover .dropdown-content {
@@ -85,3 +85,43 @@ li.dropdown {
     // display: block;
 }
 
+i {
+    color: #f1f1f1;
+}
+
+.search-container{
+    float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
