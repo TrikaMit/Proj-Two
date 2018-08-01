@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
     var Drinks = sequelize.define("Drinks", {
       //Drink will have a title (User/LCBO API), type (LCBO API), rating (LCBO API), and review (User input)
-      title: {
+      name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
