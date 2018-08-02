@@ -12,11 +12,9 @@ function wineInfo(query) {
       method: "GET",
       url: "/api/LCBO/" + query,
     //   data: query
+    }).then(function(response){
+        $('body').append(response.result);
     })
-      .then(function(res){
-        //   console.log(res)
-        //   res.json(res);
-      });
   }
 
 // function wineCall(query) {
