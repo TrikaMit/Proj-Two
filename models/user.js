@@ -16,13 +16,14 @@ module.exports = function (sequelize, DataTypes) {
     });
   
     User.associate = function (models) {
-      // Associating Author with Posts
-      // When an Author is deleted, also delete any associated Posts
-      User.hasMany(models.Drinks, {
-        as: 'drinks'
-      });
+      User.hasMany(models.Drinks, {});
     };
-  
+  //   User.create({ 
+  //     name: 'Tester', 
+  //     review: 'This is a test', 
+  // }).then(user => {
+  //     console.log(user);
+  //   });
+    
     return User;
   };
-  

@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: true,
       },
       rating: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: true,
       },
       review: {
@@ -23,17 +23,33 @@ module.exports = function (sequelize, DataTypes) {
           len: [1]
         }
       }
+      url: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      }
     });
-  
     Drinks.associate = function (models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
       Drinks.belongsTo(models.User, {
         foreignKey: {
           allowNull: false
         }
       });
     };
+    
+    
+  //   Drinks.create({ 
+  //     name: 'Tester',
+  //     type: 'A test',
+  //     rating: 3, 
+  //     review: 'This is a test',
+  //     UserId: 'Tester'
+  // }).then(drinks => {
+  //     console.log(drinks);
+  //   });
+
     return Drinks;
   };
   
