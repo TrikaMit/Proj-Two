@@ -47,7 +47,7 @@ module.exports = function (app) {
         });
     });
 
-    app.get(`/api/LCBO/:query`, function (req, res) {
+    app.get(`/api/LCBO/:query`, function (req, outer_res) {
         var query = req.params.query
         request(`https://lcboapi.com/products?access_key=${process.env.ACCESS_KEY}&q=${query}`, {
             json: true
@@ -55,8 +55,9 @@ module.exports = function (app) {
             if (err) {
                 return console.log(err)
             }
-            console.log(body.result[0]);
-
+            console.log(body.result[0].name);
+            // var result = outer_res.json(body.result[0]);
+            // console.log(result);
             // relevant properties:
             // name
             // image_url , image_thumb_url
