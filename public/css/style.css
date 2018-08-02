@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-* {
-    background-color: blue;
-}
-
-=======
-@charset "UTF-8";
->>>>>>> a5f7b8f73d79eef135d1756c4b6f3a3612536129
-=======
 @charset "UTF-8";
 .dark-blue {
   color: #283143;
@@ -33,7 +23,6 @@
   background-color: #5A8DAB;
 }
 
->>>>>>> daniel
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -294,6 +283,43 @@ template {
   overflow: hidden;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  background-color: black;
+  border-width: 0;
+  color: black;
+  height: 2px;
+  line-height: 0;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#drink-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#my-drinks {
+  margin-bottom: 4rem;
+}
+
+#drink-item {
+  width: 20rem;
+  background-color: black;
+  border-radius: 2.5rem;
+  margin-top: 3.2rem;
+  border: 0.3rem solid black;
+}
+
 .accordion-toggle {
   background-color: #283143;
   color: #1A1B41;
@@ -393,6 +419,10 @@ fieldset {
 .add-to-your-shelf-button {
   background-color: inherit;
   border: none;
+}
+
+* {
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 body {
@@ -490,12 +520,6 @@ i {
   float: right;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* {
-    background-color: #283143;
-=======
-=======
 .topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
@@ -532,7 +556,6 @@ i {
     border: 1px solid #ccc;
   }
 }
->>>>>>> daniel
 .accordion-toggle {
   background-color: #283143;
   color: #1A1B41;
@@ -632,13 +655,6 @@ fieldset {
 .add-to-your-shelf-button {
   background-color: inherit;
   border: none;
-<<<<<<< HEAD
->>>>>>> a5f7b8f73d79eef135d1756c4b6f3a3612536129
-=======
-}
-
-* {
-  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 main {
@@ -667,7 +683,6 @@ main {
 
 #result-image {
   max-width: 50%;
->>>>>>> daniel
 }
 
 /*# sourceMappingURL=style.css.map */
