@@ -99,9 +99,20 @@ i {
   font-size: 17px;
   border: none;
 }
-.topnav .search-container button {
-  float: right;
-  padding: 6px 10px;
+// .topnav .search-container button {
+//   float: right;
+//   padding: 6px 10px;
+//   margin-top: 8px;
+//   margin-right: 16px;
+//   background: #ddd;
+//   font-size: 17px;
+//   border: none;
+//   cursor: pointer;
+// }
+.search-container button {
+  position: absolute;
+  padding: 6px 200px;
+  width: 300px;
   margin-top: 8px;
   margin-right: 16px;
   background: #ddd;
