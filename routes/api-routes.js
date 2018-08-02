@@ -56,7 +56,7 @@ module.exports = function (app) {
                 return console.log(err)
             }
             console.log(body.result[0].name);
-            // var result = outer_res.json(body.result[0]);
+            outer_res.json(body.result[0]);
             // console.log(result);
             // relevant properties:
             // name
