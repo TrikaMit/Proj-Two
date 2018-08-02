@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-* {
-    background-color: blue;
-}
-
-=======
-@charset "UTF-8";
->>>>>>> a5f7b8f73d79eef135d1756c4b6f3a3612536129
-=======
 @charset "UTF-8";
 .dark-blue {
   color: #283143;
@@ -33,7 +23,6 @@
   background-color: #5A8DAB;
 }
 
->>>>>>> daniel
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -294,6 +283,43 @@ template {
   overflow: hidden;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+hr {
+  background-color: black;
+  border-width: 0;
+  color: black;
+  height: 2px;
+  line-height: 0;
+  margin: auto;
+  text-align: center;
+  width: 80%;
+}
+
+#drink-row {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+#my-drinks {
+  margin-bottom: 4rem;
+}
+
+#drink-item {
+  width: 20rem;
+  background-color: black;
+  border-radius: 2.5rem;
+  margin-top: 3.2rem;
+  border: 0.3rem solid black;
+}
+
 .accordion-toggle {
   background-color: #283143;
   color: #1A1B41;
@@ -393,6 +419,10 @@ fieldset {
 .add-to-your-shelf-button {
   background-color: inherit;
   border: none;
+}
+
+* {
+  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 body {
@@ -490,12 +520,6 @@ i {
   float: right;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-* {
-    background-color: #283143;
-=======
-=======
 .topnav input[type=text] {
   padding: 6px;
   margin-top: 8px;
@@ -532,7 +556,6 @@ i {
     border: 1px solid #ccc;
   }
 }
->>>>>>> daniel
 .accordion-toggle {
   background-color: #283143;
   color: #1A1B41;
@@ -632,13 +655,6 @@ fieldset {
 .add-to-your-shelf-button {
   background-color: inherit;
   border: none;
-<<<<<<< HEAD
->>>>>>> a5f7b8f73d79eef135d1756c4b6f3a3612536129
-=======
-}
-
-* {
-  font-family: "Arial", "Helvetica", sans-serif;
 }
 
 main {
@@ -667,7 +683,140 @@ main {
 
 #result-image {
   max-width: 50%;
->>>>>>> daniel
+}
+
+.modal-backdrop {
+  opacity: 0.75 !important;
+}
+
+@media only screen and (max-width: 767px) {
+  #modal-error {
+    background: rgba(223, 32, 44, 0.5);
+    margin-top: 15px;
+    margin-left: 15px;
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  #ageModal .modal-dialog {
+    border: 0;
+    border-box-shadow: 0;
+    min-width: 350px;
+  }
+  #ageModal .modal-dialog .modal-content {
+    height: 100%;
+    background: white;
+    border: none;
+    padding: 15px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body {
+    background: white;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #modal-age-limit > h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    text-align: center;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #age-submit {
+    float: right;
+    border: 2px solid black;
+    border-radius: 0;
+    background-color: #DF202C;
+    color: white;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #age-submit:hover {
+    background-color: #9c161f;
+  }
+  #ageModal .modal-dialog .modal-content .modal-footer {
+    border-top: 0;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #modal-error {
+    background: rgba(223, 32, 44, 0.5);
+    padding: 2px;
+    width: 355px;
+    margin-left: 13px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  #ageModal .modal-dialog {
+    border: 0;
+    min-width: 350px;
+    height: 750px;
+    width: 750px;
+  }
+  #ageModal .modal-dialog .modal-content {
+    height: 100%;
+    background: white;
+    border: none;
+    padding: 15px 15px 0px 15px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body {
+    width: 100%;
+    height: 100%;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #modal-age-limit > h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body .form-area {
+    margin-top: 180px;
+    margin-left: 225px;
+    margin-right: 40px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body .form-area #verify-month {
+    width: 300px;
+    margin-bottom: 5px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body .form-area #verify-day {
+    margin-left: 18px;
+    margin-bottom: 5px;
+    width: 300px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body .form-area #verify-year {
+    margin-left: 12px;
+    margin-bottom: 5px;
+    width: 300px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #modal-age-limit > h4 {
+    margin-top: 25px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-body #age-submit-area #age-submit {
+    float: right;
+    border: 2px solid black;
+    border-radius: 0;
+    background: red;
+    color: white;
+    margin-top: 15px;
+    margin-right: 35px;
+  }
+  #ageModal .modal-dialog .modal-content .modal-footer {
+    border-top: 0;
+    padding: 0;
+    margin-left: -30px;
+    margin-right: -15px;
+    border-top: 2px solid gray;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+  }
+}
+body {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/adam-wilson-416248-unsplash.jpg"), center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
