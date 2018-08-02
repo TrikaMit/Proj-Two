@@ -1,73 +1,68 @@
 var db = require('../models')
+require('dotenv').config()
+var request = require('request')
 
 module.exports = function (app) {
-
-    app.get('api/users'), function (req, res) {
-        db.User.findAll({}).then(function (resultsUser) {
-            res.json(resultsUser);
-        });
-    }
-
-    app.get('api/drinks'), function(req, res) {
-        db.Drinks.findAll({}).then(function( resultsDrinks){
-            res.json(resultsDrinks)
-        })
-    }
-
-    // POST route for saving a new todo
-    app.post("/api/todos", function (req, res) {
-        // create takes an argument of an object describing the item we want to
-        // insert into our table. In this case we just we pass in an object with a text
-        // and complete property (req.body)
-        db.Todo.create({
-                text: req.body.text,
-                complete: req.body.complete
-            }).then(function (dbTodo) {
-                // We have access to the new todo as an argument inside of the callback function
-                res.json(dbTodo);
-            })
-            .catch(function (err) {
-                // Whenever a validation or flag fails, an error is thrown
-                // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-                if (err.validatorName === 'len') {
-                    res.json('Text too short');
-                }
-            });
+    //tester function to make sure API get works
+    app.get("/api/test", function (req, res) {
+        res.json("this is a test")
     });
-
-    // DELETE route for deleting todos. We can get the id of the todo to be deleted from
-    // req.params.id
-    app.delete("/api/todos/:id", function (req, res) {
-        // We just have to specify which todo we want to destroy with "where"
-        db.Todo.destroy({
+    //displays all users in DB 
+    app.get("/api/users", function (req, res) {
+        db.User.findAll({
+            include: [
+                db.Drinks
+            ]
+        }).then(function (dbUser) {
+            res.json(dbUser);
+        });
+    });
+    //displays user based on name, if one exists
+    app.get("/api/users/:id", function (req, res) {
+        db.User.findOne({
+            where: {
+                name: req.params.id
+            },
+            include: [db.Drinks]
+        }).then(function (dbUser) {
+            res.json(dbUser);
+        });
+    });
+    //displays all drinks in DB 
+    app.get("/api/drinks", function (req, res) {
+        db.Drinks.findAll({
+            include: [db.User]
+        }).then(function (dbDrinks) {
+            res.json(dbDrinks);
+        });
+    });
+    app.get("/api/drinks/:id", function (req, res) {
+        db.Drinks.findOne({
             where: {
                 id: req.params.id
-            }
-        }).then(function (dbTodo) {
-            res.json(dbTodo);
+            },
+            include: [db.User]
+        }).then(function (dbDrinks) {
+            res.json(dbDrinks);
         });
-
     });
 
-    // PUT route for updating todos. We can get the updated todo data from req.body
-    app.put("/api/todos", function (req, res) {
+    app.get(`/api/LCBO/:query`, function (req, outer_res) {
+        var query = req.params.query
+        request(`https://lcboapi.com/products?access_key=${process.env.ACCESS_KEY}&q=${query}`, {
+            json: true
+        }, (err, res, body) => {
+            if (err) {
+                return console.log(err)
+            }
+            console.log(body.result[0].name);
+            // var result = outer_res.json(body.result[0]);
+            // console.log(result);
+            // relevant properties:
+            // name
+            // image_url , image_thumb_url
+            // style
+        })
+    })
 
-        // Update takes in an object describing the properties we want to update, and
-        // we use where to describe which objects we want to update
-        db.Todo.update({
-                text: req.body.text,
-                complete: req.body.complete
-            }, {
-                where: {
-                    id: req.body.id
-                }
-            }).then(function (dbTodo) {
-                res.json(dbTodo);
-            })
-            .catch(function (err) {
-                // Whenever a validation or flag fails, an error is thrown
-                // We can "catch" the error to prevent it from being "thrown", which could crash our node app
-                res.json(err);
-            });
-    });
 };

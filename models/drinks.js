@@ -1,6 +1,29 @@
 module.exports = function (sequelize, DataTypes) {
     var Drinks = sequelize.define("Drinks", {
-      title: {
+      //Drink will have a title (User/LCBO API), type (LCBO API), rating (LCBO API), and review (User input)
+      name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      rating: {
+        type: DataTypes.INTEGER,
+        allowNull: true,
+      },
+      review: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      url: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -8,17 +31,25 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     });
-  
     Drinks.associate = function (models) {
-      // We're saying that a Post should belong to an Author
-      // A Post can't be created without an Author due to the foreign key constraint
-      Post.belongsTo(models.User, {
+      Drinks.belongsTo(models.User, {
         foreignKey: {
           allowNull: false
         }
       });
     };
-  
+    
+    
+  //   Drinks.create({ 
+  //     name: 'Tester',
+  //     type: 'A test',
+  //     rating: 3, 
+  //     review: 'This is a test',
+  //     UserId: 'Tester'
+  // }).then(drinks => {
+  //     console.log(drinks);
+  //   });
+
     return Drinks;
   };
   

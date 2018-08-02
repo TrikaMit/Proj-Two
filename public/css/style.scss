@@ -3,8 +3,25 @@
 @import "topshelf-styling";
 @import "accordion";
 @import "fonts";
+@import "nav";
+@import "accordion";
 @import "alignments";
+@import "modal";
 
 
+<<<<<<< HEAD
 
 
+=======
+body {
+    height:100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/adam-wilson-416248-unsplash.jpg"),
+    center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-image: url(../img/adam-wilson-416248-unsplash.jpg)
+}
+>>>>>>> 8080698cd956391d0ae0ab5bf6b7e5ccdadde097
