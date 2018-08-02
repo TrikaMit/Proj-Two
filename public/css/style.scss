@@ -1,21 +1,22 @@
 @import "colours";
 @import "normalize";
-<<<<<<< HEAD
-<<<<<<< HEAD
-@import "nav";
-
-* {
-    background-color:#283143;
-}
-=======
-@import "accordion"
-
-
->>>>>>> a5f7b8f73d79eef135d1756c4b6f3a3612536129
-=======
-@import "accordion";
-@import "nav";
+@import "topshelf-styling";
 @import "accordion";
 @import "fonts";
+@import "nav";
+@import "accordion";
 @import "alignments";
->>>>>>> daniel
+@import "modal";
+
+
+body {
+    height:100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/adam-wilson-416248-unsplash.jpg"),
+    center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background-image: url(../img/adam-wilson-416248-unsplash.jpg)
+}
