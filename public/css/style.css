@@ -186,13 +186,12 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
+=======
+  outline: 1px dotted ButtonText; }
 
-legend {
-  box-sizing: border-box;
-  color: inherit;
+fieldset {
   display: table;
   max-width: 100%;
   padding: 0;
@@ -431,18 +430,16 @@ fieldset {
   background: transparent;
 }
 
-.add-to-your-shelf-button {
   background-color: inherit;
   border: none;
 }
 
 * {
   font-family: "Arial", "Helvetica", sans-serif;
+  background: transparent;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.add-to-your-shelf-button {
 }
 
 .topnav {
@@ -531,8 +528,11 @@ i {
   color: #f1f1f1;
 }
 
-.search-container {
-  float: right;
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .topnav input[type=text] {
