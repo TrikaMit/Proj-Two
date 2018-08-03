@@ -10,28 +10,46 @@
     <title>My Top Shelf</title>
 </head>
 <body>
-<div class="topnav">
-    <ul>
-    <li><a class="active navbar" href="#home">Home</a></li>
-    <li><a href="#about">ABOUT</a></li>
-    <li><a href="#shelf user"><i class="fas fa-wine-glass-alt"></i>
-SHELF USER</a></li>
-    <li><a href="#top rated"><i class="far fa-star"></i>
-TOP RATED</a></li>
-    <li class="dropdown"><a class="dropbtn">DRINKS</a>
-        <div class="dropdown-content navbar">
-                <a herf="#"><i class="fas fa-wine-glass-alt"></i> wine</a>
-                <a herf="#"><i class="fas fa-cocktail"></i> spirit</a>
-                <a herf="#"><i class="fas fa-beer"></i> beer</a>
-            </div>
-        </li>
-            <div class="search-container navbar">
-            <form>
-                <input id="query" type="text" placeholder="Search.." name="search">
-                <button id="submit" type="submit"><i class="fa fa-search"></i></button>
-            </form></div>
-    </ul>
+    <div class="topnav">
+        <ul>
+            <li>
+                <a class="active navbar" href="#home">Home</a>
+            </li>
+            <li>
+                <a href="#about">ABOUT</a>
+            </li>
+            <li>
+                <a href="#shelf user">
+                    <i class="fas fa-wine-glass-alt"></i>SHELF USER</a>
+            </li>
+            <li>
+                <a href="#top rated">
+                    <i class="far fa-star"></i>TOP RATED</a>
+            </li>
+            <!-- <li class="dropdown">
+                <a class="dropbtn">DRINKS</a>
 
+            <div class="dropdown-content navbar">
+                    <a herf="#"><i class="fas fa-wine-glass-alt"></i> wine</a>
+                    <a herf="#"><i class="fas fa-cocktail"></i> spirit</a>
+                    <a herf="#"><i class="fas fa-beer"></i> beer</a>
+                </div>
+            </li> -->
+
+        </ul>
+
+    </div>
+<div class="flex-center">
+    <img src="img/top_shelf.svg" alt="Top Shelf logo">
+</div>
+
+<div class="flex-center navbar">
+    <form>
+        <input id="query" type="text" placeholder="Search.." name="search">
+        <button id="submit" type="submit">
+            <i class="fa fa-search"></i>
+        </button>
+    </form>
 </div>
 <div id = "testing"></div>
 <script src="https://code.jquery.com/jquery.js"></script>
