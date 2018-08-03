@@ -516,8 +516,11 @@ i {
   color: #f1f1f1;
 }
 
-.search-container {
-  float: right;
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .topnav input[type=text] {
