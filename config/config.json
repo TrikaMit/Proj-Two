@@ -1,6 +1,6 @@
 {
     "development": {
-        "username": "test",
+        "username": "root",
         "password": "password",
         "database": "drinks",
         "host": "127.0.0.1",
@@ -8,7 +8,7 @@
         "dialect": "mysql"
     },
     "test": {
-        "username": "test",
+        "username": "root",
         "password": "password",
         "database": "drinks",
         "host": "127.0.0.1",
@@ -16,7 +16,7 @@
         "dialect": "mysql"
     },
     "production": {
-        "username": "test",
+        "username": "root",
         "password": "password",
         "database": "drinks",
         "host": "127.0.0.1",
