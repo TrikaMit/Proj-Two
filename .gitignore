@@ -1,4 +1,4 @@
 .DS_Store
-node_modules
+node_modules/
 .env
-style.css.map
+public/css/style.css.map
