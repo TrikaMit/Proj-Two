@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-node_modules
-.DS_Store
-
-/config/*.json
-=======
 .DS_Store
 node_modules/
 .env
 public/css/style.css.map
->>>>>>> 6335b65481f3c91dad16a17d3a2585590f586255
