@@ -5,16 +5,18 @@ $('#submit').on('click', function () {
     console.log(query)
     wineInfo(query);
 
+
 })
 
 function wineInfo(query) {
     $.ajax({
       method: "GET",
-      url: "/api/LCBO/" + query,
+      url: "/api/LCBO/" + query
     //   data: query
-    }).then(function(response){
-        $('body').append(response.result);
-    })
+    }).done(function(data){
+        console.log(data);
+        $('body').append(data.name)
+    });
   }
 
 // function wineCall(query) {
