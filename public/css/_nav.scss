@@ -11,36 +11,26 @@
 
 .top-a:hover {
     background-color:#5A8DAB;
-    transition: 1s;
+    transition: 0.5s;
 }
-
-.topnav a.active {
-    background-color: #5A8DAB;
-    color: white;
-}
-
-.width-eighty {
-    max-width:80%;
-}
-
 
 a i {
     padding-right:5px;
 }
 
-
-.flex-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
 button {
     background: #5A8DAB;
     font-size: 1em;
-    border: 8px solid #5A8DAB;
     cursor: pointer;
+    padding:1em;
+    border:none;
+    border-radius:3px;
+    margin-left:3px;
+}
+
+button:hover {
+    background-color:#283143;
+    transition:0.5s;
 }
 
 
@@ -53,11 +43,35 @@ button {
 .main-search-box {
     line-height:2.5;
     width:100%;
+    border:4px solid white;
+    border-radius:3px;
 }
 
 .main-search-form {
-    max-width: 100%;
+    margin:0.5em 0;
 }
+
+.width-hundred{
+    width:100%;
+}
+
+.form-width {
+    width: 30vw;
+}
+
+@media only screen and (max-width:956px) {
+    .form-width {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width:525px) {
+    .form-width {
+        width: 90vw;
+    }
+}
+
+
 
 
 
