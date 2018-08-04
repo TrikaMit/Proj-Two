@@ -6,77 +6,22 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <style>
-        .modal {
-            /* display: none; */
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-
-        /* Modal Content/Box */
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            /* Could be more or less, depending on screen size */
-        }
-
-        /* The Close Button */
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-
-    <!-- The Modal -->
     <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <!-- <span class="close">&times;</span> -->
-            <p>Age Checker</p>
-            <p>Please enter your birthday:</p>
-            <form action="">
+        <div class="modal-content align-center">
+            <h1>To enter TopShelf, you must be 19</h1>
+            <h2>Please enter your birthday:</h2>
+            <form action="" class="modal-form">
                 <input id="day" type="number" name="day" min="1" max="31" placeholder="DD">
                 <input id="month" type="number" name="month" min="1" max="12" placeholder="MM">
                 <input id="year" type="number" name="year" min="1900" max="2018" placeholder="YYYY">
-                <input type="submit">
+                <input type="submit" class="modal-submit">
             </form>
-
 
         </div>
 
@@ -100,11 +45,7 @@
             modal.append(`<p>Nineteen years ago is ${nineteen}</p>`);
 
             $('#myForm').submit(function () {
-                // get all the inputs into an array.
                 var $inputs = $('#myForm :input');
-
-                // not sure if you wanted this, but I thought I'd add it.
-                // get an associative array of just the values.
                 var values = {};
                 $inputs.each(function () {
                     values[this.name] = $(this).val();
@@ -122,32 +63,6 @@
             // }
         });
 
-
-
-
-
-        // Get the button that opens the modal
-        //var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        //var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on the button, open the modal
-        // btn.onclick = function () {
-        //     modal.style.display = "block";
-        // }
-
-        // When the user clicks on <span> (x), close the modal
-        // span.onclick = function () {
-        //     modal.style.display = "none";
-        // }
-
-        // When the user clicks anywhere outside of the modal, close it
-        // window.onclick = function (event) {
-        //     if (event.target == modal) {
-        //         modal.style.display = "none";
-        //     }
-        // }
     </script>
 
 
