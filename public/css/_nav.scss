@@ -28,10 +28,16 @@ button {
     margin-left:3px;
 }
 
-button:hover {
+button:hover  {
     background-color:#283143;
     transition:0.5s;
 }
+
+.accordion-toggle {
+    border-radius:5px;
+    max-width:80%;
+}
+
 
 
 .top-shelf-logo {
@@ -69,6 +75,10 @@ button:hover {
     .form-width {
         width: 90vw;
     }
+}
+
+#search-body {
+    // display:none;
 }
 
 

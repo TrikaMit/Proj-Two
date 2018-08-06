@@ -21,15 +21,16 @@
 </style>
 </head>
 <body>
-    <main class="align-center">
-        <figure class="result-image align-center">
-            <img id="result-image" src="http://placekitten.com/g/900/900" alt="beverage" class="margin-auto">
-            <figcaption id="result-name" class="margin-auto">Placeholder Text</figcaption>
+    <section class="align-center search-body">
+        <figure class="align-center">
+            <img id="search-result-img" src="http://placekitten.com/g/900/900" alt="beverage" class="margin-auto top-drink-img">
+            <figcaption id="result-name" class="margin-auto result-name">Placeholder Text</figcaption>
+            <p id="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et alias dolor harum quia possimus facilis?</p>
         </figure>
 
-        <div class="accordion-toggle align-row">
+        <div class="accordion-toggle align-row top-a">
             <i class="fas fa-wine-glass-alt grey"></i>
-            <button class="add-to-your-shelf-button grey">Add to Your Top Shelf</button>
+            <p class="add-to-shelf">ADD TO YOUR TOP SHELF</p>
         </div>
 
         <section class="panel">
@@ -52,15 +53,17 @@
                 </fieldset>
             </form>
 
-            <form class="align-row">
-                <label for="review">Review:</label>
-                <input type="text" id="review">
-                <input type="submit" value="Add to Your Top Shelf" id="submit-button">
+            <form class="align-center">
+                <label for="review">Your Review:</label>
+                <textarea name="review" cols="40" rows="5" id="review"></textarea>
+                <button type="submit" class="top-a">
+                    <i class="far fa-star"></i>ADD REVIEW
+                </button>
             </form>
         </section>
 
 
-    </main>
+    </section>
 
 
 

@@ -11,8 +11,8 @@
 
 <body>
 
-    <div id="myModal" class="modal">
 
+    <div id="myModal" class="modal">
         <div class="modal-content align-center">
             <h1>To enter TopShelf, you must be 19</h1>
             <h2>Please enter your birthday:</h2>
@@ -22,7 +22,6 @@
                 <input id="year" type="number" name="year" min="1900" max="2018" placeholder="YYYY">
                 <input type="submit" class="modal-submit">
             </form>
-
         </div>
 
     </div>
@@ -36,7 +35,7 @@
             const date = Date.today().toString('MMMM dS, yyyy');
             const modal = $('.modal-content');
             console.log(date);
-
+            console.log(Date.today());
             modal.append(`<p>Today is ${date}</p>`);
 
             const nineteen = Date.today().add(-19).years().toString('MMMM dS, yyyy');
@@ -44,7 +43,28 @@
 
             modal.append(`<p>Nineteen years ago is ${nineteen}</p>`);
 
+            // let compareDate = Date.compare(date, nineteen);
+
+            // console.log(compareDate);
+
+
+
+
+            $(".modal-submit").on("click", function(event){
+                event.preventDefault();
+                let day = $("#day").val();
+                let month = $("#month").val();
+                let year = $("#year").val();
+                let birthday = `${day} ${month} ${year}`;
+                console.log(birthday);
+
+            });
+
+
+
             $('#myForm').submit(function () {
+
+
                 var $inputs = $('#myForm :input');
                 var values = {};
                 $inputs.each(function () {
