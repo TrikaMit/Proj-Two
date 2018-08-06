@@ -5,16 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
     <title>Top Rated</title>
 </head>
 
-<body>
-    <h1>Top Rated</h1>
-    <hr>
+<body class="top-drinks">
 
-    <main class="flex-row">
-        <figure class="result-image align-center">
+    <img src="http://placekitten.com/g/200/100" alt="top-shelf logo" class="top-logo top-hide">
+
+    <p class="hamburger top-hide">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </p>
+
+    <nav class="hide">
+        <div class="align-center margin-top">
+            <form class="align-row top-search-form form-width menu">
+                <input class="top-search-box" id="query" type="text" placeholder="Search For Your Beverage" name="search">
+                <button id="submit" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <a href="./top-drinks.html" class="top-a form-width">
+                <i class="far fa-star"></i>SEE TOP RATED
+            </a>
+        </div>
+
+    </nav>
+
+<div class="top-rated-div">
+    <h1 class="top-title">TOP RATED</h1>
+    <hr>
+    <h2>See Top Rated Beverages</h2>
+    <main class="align-center">
+        <figure class="align-center result">
             <img class="top-drink-img" src="http://placekitten.com/g/900/900" alt="beverage" class="margin-auto">
             <figcaption id="result-name" class="margin-auto">Placeholder Text</figcaption>
         </figure>
@@ -36,15 +62,14 @@
         </figure>
     </main>
 
+</div>
 
 
 
 
 
 
-
-
-    <script src="./js/drinks.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 
 </html>

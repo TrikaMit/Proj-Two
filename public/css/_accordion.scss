@@ -1,7 +1,7 @@
 .accordion-toggle {
     cursor: pointer;
     padding: 1rem;
-    width: 100%;
+    width: 60%;
     text-align: left;
     border: none;
     outline: none;
@@ -30,7 +30,7 @@
     max-height: 0;
     transition: max-height .3s ease-out;
     border-radius:5px;
-    width:80%;
+    width:60%;
     margin-top:3px;
     padding:5px 5px 25px 5px;
 }
@@ -131,12 +131,15 @@ p {
     text-align: center;
 }
 
-.top-drink-img {
+.search-result-image {
     max-width: 50%;
 }
 
 @media only screen and (max-width:780px) {
     .top-drink-img {
         max-width: 70%;
+    }
+    .panel, .accordion-toggle{
+        width:80%;
     }
 }
