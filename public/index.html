@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Top Shelf</title>
+    <title>TopShelf</title>
 </head>
 
 <body>
+
+<!-- //TODO: fix a links routing?? or show/hide?? -->
 <!-- TODO: sub in topshelf only image -->
     <img src="http://placekitten.com/g/200/100" alt="top-shelf logo" class="top-logo top-hide">
 
@@ -28,13 +30,13 @@
                     <i class="fa fa-search"></i>
                 </button>
             </form>
+            <a href="#top-rated" class="top-a form-width">HOME</a>
             <a href="#top-rated" class="top-a form-width">
                 <i class="far fa-star"></i>SEE TOP RATED
             </a>
         </div>
 
     </nav>
-
 
     <main class="main-search">
         <div class="align-center">
@@ -92,7 +94,7 @@
             <form class="align-center">
                 <label for="review">Your Review:</label>
                 <textarea name="review" cols="40" rows="5" id="review"></textarea>
-                <button type="submit" class="top-a">
+                <button type="submit" class="top-a submit-review">
                     <i class="far fa-star"></i>ADD REVIEW
                 </button>
             </form>
@@ -115,6 +117,12 @@
                 $('#search-body').show();
                 $(".main-search").hide();
                 $('.top-hide').show();
+        });
+
+        $('.submit-review').on("click", function(){
+
+        //TODO: CREATE
+            event.preventDefault();
         });
 
             var accordion = document.getElementsByClassName("accordion-toggle");

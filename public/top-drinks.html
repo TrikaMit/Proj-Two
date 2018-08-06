@@ -28,9 +28,7 @@
                     <i class="fa fa-search"></i>
                 </button>
             </form>
-            <a href="./top-drinks.html" class="top-a form-width">
-                <i class="far fa-star"></i>SEE TOP RATED
-            </a>
+            <a href="#top-rated" class="top-a form-width">HOME</a>
         </div>
 
     </nav>
@@ -70,6 +68,12 @@
 
 
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script>
+    $('.hamburger').on('click', function(){
+            console.log('working');
+            $('nav').toggleClass('hide');
+
+        });</script>
 </body>
 
 </html>
