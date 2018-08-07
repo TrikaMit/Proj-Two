@@ -18,14 +18,11 @@ function wineInfo(query) {
     });
   }
 
-// function wineCall(query) {
-//     $.ajax({
-//         url: `https://lcboapi.com/products?q=${query}`,
-//         method: 'GET',
-//         headers: {
-//             'Authorization': 'Token MDo3Y2Y5OGI3OC05MjgxLTExZTgtODhjNi0wZjcyYzQ0MDdiYzE6bnp2b0pjUDlpdUUxUnplbVAxZ3NvdDNMZmtzcWxGeFFwMEFI'
-//         }
-//     }).then(function (response) {
-//         console.log(response)
-//     });
-// };
+//show/hide function on click
+
+//submit to DB on click
+
+//close button & refresh page
+
+
+
