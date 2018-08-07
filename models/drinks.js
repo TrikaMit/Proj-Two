@@ -39,11 +39,11 @@ module.exports = function (sequelize, DataTypes) {
       }
     });
 
-    
-  //   Drinks.create({ 
+
+  //   Drinks.create({
   //     name: 'Tester',
   //     type: 'A test',
-  //     rating: 3, 
+  //     rating: 3,
   //     review: 'This is a test',
   //     UserId: 'Tester'
   // }).then(drinks => {
@@ -52,4 +52,3 @@ module.exports = function (sequelize, DataTypes) {
 
     return Drinks;
   };
-  

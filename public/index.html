@@ -62,8 +62,8 @@
     <section id="search-body" class="align-center">
         <figure class="align-center">
             <img id="search-result-img" src="http://placekitten.com/g/900/900" alt="beverage" class="margin-auto search-result-image">
-            <figcaption id="result-name" class="margin-auto result-name">Placeholder Text</figcaption>
-            <p id="result-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et alias dolor harum quia possimus facilis?</p>
+            <figcaption id="result-name" class="margin-auto result-name"></figcaption>
+            <p id="result-description"></p>
         </figure>
 
         <div class="accordion-toggle align-row top-a">
@@ -109,59 +109,6 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="./js/search.js" type="text/javascript"></script>
 
-    <!-- <script>
-        $(document).ready(function(){
-            $('#search-body').hide();
-            $('.top-hide').hide();
-
-            $("#submit-main").on("click", function(){
-                event.preventDefault();
-                $('#search-body').show();
-                $(".main-search").hide();
-                $('.top-hide').show();
-        });
-
-
-        $('.submit-review').on("click", function(){
-
-        //TODO: CREATE
-            event.preventDefault();
-        });
-
-            var accordion = document.getElementsByClassName("accordion-toggle");
-
-        for (var i = 0; i < accordion.length; i++) {
-            accordion[i].addEventListener("click", function () {
-                this.classList.toggle("active");
-
-                var panel = this.nextElementSibling;
-                if (panel.style.display === "block") {
-                    panel.style.display = "none";
-                } else {
-                    panel.style.display = "block";
-                }
-
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                }
-            });
-            }
-
-
-        $('.hamburger').on('click', function(){
-            console.log('working');
-            $('nav').toggleClass('hide');
-
-        });
-
-//end document ready:
- });
-
-
-
-    </script> -->
 
 </body>
 

@@ -449,7 +449,7 @@ p {
 }
 
 .search-result-image {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 @media only screen and (max-width: 780px) {
@@ -707,7 +707,7 @@ p {
 }
 
 .search-result-image {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 @media only screen and (max-width: 780px) {
