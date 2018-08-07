@@ -1,10 +1,9 @@
 
-$('#submit').on('click', function () {
+$('#submit-main').on('click', function () {
     event.preventDefault();
     var query = $('#query').val().trim();
     console.log(query)
     wineInfo(query);
-
 
 })
 

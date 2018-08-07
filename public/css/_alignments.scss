@@ -4,27 +4,43 @@ main {
 }
 
 .align-center {
-    margin:0 auto;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-content:center;
+    align-items:center;
 }
 
 .align-row {
     display:flex;
     flex-direction:row;
     justify-content:center;
-    align-content:center;
+    align-items:center;
 }
+
+.flex-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .margin-auto {
     margin:0 auto;
 }
 
 #result-image {
-    max-width:50%;
+    max-width:100%;
 }
+
+.margin-top {
+    margin-top:65px;
+}
+
+
+
+
+
 
 
 
