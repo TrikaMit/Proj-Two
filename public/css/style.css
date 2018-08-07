@@ -295,6 +295,10 @@ h1, h2 {
   margin-top: 5%;
 }
 
+h2 {
+  font-weight: 400;
+}
+
 hr {
   background-color: white;
   border-width: 0;
@@ -318,6 +322,14 @@ hr {
     margin-top: 1%;
   }
 }
+.top-rated-title {
+  max-width: 46%;
+}
+
+.top-rated-caption {
+  padding-top: 1%;
+}
+
 .accordion-toggle {
   cursor: pointer;
   padding: 1rem;
@@ -437,7 +449,7 @@ p {
 }
 
 .search-result-image {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 @media only screen and (max-width: 780px) {
@@ -572,6 +584,10 @@ h1, h2 {
   color: white;
 }
 
+.top-logo {
+  max-width: 15%;
+}
+
 .accordion-toggle {
   cursor: pointer;
   padding: 1rem;
@@ -691,7 +707,7 @@ p {
 }
 
 .search-result-image {
-  max-width: 50%;
+  max-width: 40%;
 }
 
 @media only screen and (max-width: 780px) {
