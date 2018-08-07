@@ -1,9 +1,7 @@
 .accordion-toggle {
-    background-color: #283143;
-    color: #1A1B41;
     cursor: pointer;
     padding: 1rem;
-    width: 100%;
+    width: 60%;
     text-align: left;
     border: none;
     outline: none;
@@ -31,6 +29,10 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height .3s ease-out;
+    border-radius:5px;
+    width:60%;
+    margin-top:3px;
+    padding:5px 5px 25px 5px;
 }
 
 
@@ -42,7 +44,7 @@ $checked-color: goldenrod;
 
     font-size: 0;
     * {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     unicode-bidi: bidi-override;
     direction: rtl;
@@ -108,7 +110,36 @@ fieldset {
     background: transparent;
 }
 
-.add-to-your-shelf-button {
-    background-color:inherit;
-    border:none;
+p {
+    padding-left:10px;
+}
+
+#review {
+    width:90%;
+}
+
+
+.result-name {
+    color: white;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#result-description {
+    color: white;
+    text-align: center;
+}
+
+.search-result-image {
+    max-width: 50%;
+}
+
+@media only screen and (max-width:780px) {
+    .top-drink-img {
+        max-width: 70%;
+    }
+    .panel, .accordion-toggle{
+        width:80%;
+    }
 }
