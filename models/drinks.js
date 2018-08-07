@@ -1,29 +1,36 @@
 module.exports = function (sequelize, DataTypes) {
     var Drinks = sequelize.define("Drinks", {
       //Drink will have a title (User/LCBO API), type (LCBO API), rating (LCBO API), and review (User input)
-      name: {
+      drink_name: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
           len: [1]
         }
       },
-      type: {
+      tasting_note: {
         type: DataTypes.STRING,
         allowNull: true,
       },
-      rating: {
+      drink_pic: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      user_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          len: [1]
+        }
+      },
+      user_rating: {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
-      review: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-      },
-      url: {
+      user_review: {
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
@@ -31,14 +38,7 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     });
-    Drinks.associate = function (models) {
-      Drinks.belongsTo(models.User, {
-        foreignKey: {
-          allowNull: false
-        }
-      });
-    };
-    
+
     
   //   Drinks.create({ 
   //     name: 'Tester',
