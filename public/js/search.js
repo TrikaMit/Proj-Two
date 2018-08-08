@@ -4,7 +4,6 @@ $('#submit-main').on('click', function () {
     var query = $('#query').val().trim();
     console.log(query)
     wineInfo(query);
-
 })
 
 function wineInfo(query) {
@@ -14,7 +13,7 @@ function wineInfo(query) {
     //   data: query
     }).done(function(data){
         console.log(data);
-        $('body').append(data.name)
+        // $('body').append(data.name)
         $("#search-result-img").attr("src", data.image_url);
         $('#result-name').append(data.name);
         $("#result-description").append(data.tasting_note);
@@ -22,17 +21,16 @@ function wineInfo(query) {
     });
   }
 
-  function topDrinks(query) {
+  function topDrinks() {
       $.ajax({
           method: "GET",
           url: "/api/drinks"
       }).done(function (data) {
-          console.log(data);
+          console.log(`HALLO THIS IS MY ${data}`);
         //   $('body').append(data.name)
         //   $("#search-result-img").attr("src", data.image_url);
-        //   $('#result-name').append(data.name);
+          $('#result-one-name').append(data);
         //   $("#result-description").append(data.tasting_note);
-
       });
   }
 //show/hide function on click

@@ -28,12 +28,12 @@ module.exports = function (app) {
             res.json(dbUser);
         });
     });
+
     //displays all drinks in DB
     //TODO: on search.js add in
 
     app.get("/api/drinks", function (req, res) {
         db.Drinks.findAll({
-            
         }).then(function (dbDrinks) {
             res.json(dbDrinks);
         });
