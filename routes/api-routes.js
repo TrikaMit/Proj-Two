@@ -7,7 +7,7 @@ module.exports = function (app) {
     app.get("/api/test", function (req, res) {
         res.json("this is a test")
     });
-    //displays all users in DB 
+    //displays all users in DB
     app.get("/api/users", function (req, res) {
         db.User.findAll({
             include: [
@@ -28,7 +28,9 @@ module.exports = function (app) {
             res.json(dbUser);
         });
     });
-    //displays all drinks in DB 
+    //displays all drinks in DB
+    //TODO: on search.js add in
+
     app.get("/api/drinks", function (req, res) {
         db.Drinks.findAll({
             include: [db.User]
@@ -36,6 +38,7 @@ module.exports = function (app) {
             res.json(dbDrinks);
         });
     });
+
     app.get("/api/drinks/:id", function (req, res) {
         db.Drinks.findOne({
             where: {
@@ -62,7 +65,9 @@ module.exports = function (app) {
             // name
             // image_url , image_thumb_url
             // style
-        })
-    })
+        });
+    });
+
+
 
 };
