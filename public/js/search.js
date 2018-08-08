@@ -35,6 +35,13 @@ function wineInfo(query) {
 
       });
   }
+//show/hide function on click
+
+//submit to DB on click
+
+//close button & refresh page
+
+
 
 // function wineCall(query) {
 //     $.ajax({

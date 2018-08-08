@@ -33,7 +33,7 @@ module.exports = function (app) {
 
     app.get("/api/drinks", function (req, res) {
         db.Drinks.findAll({
-            include: [db.User]
+            
         }).then(function (dbDrinks) {
             res.json(dbDrinks);
         });
