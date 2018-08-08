@@ -461,8 +461,16 @@ p {
     width: 80%;
   }
 }
+#name {
+  max-width: 90%;
+}
+
 body, *, input, button {
   font-family: "Cabin", sans-serif;
+}
+
+h2 {
+  line-height: 1.5;
 }
 
 .top-a {
@@ -719,6 +727,10 @@ p {
     width: 80%;
   }
 }
+#name {
+  max-width: 90%;
+}
+
 main {
   max-width: 980px;
   margin: 0 auto;

@@ -41,11 +41,11 @@ module.exports = function (sequelize, DataTypes) {
 
 
   //   Drinks.create({
-  //     drink_name: 'Tester',
+  //     drink_name: 'Amazing wine',
   //     tasting_note: 'A test',
-  //     drink_pic: 'A url',
+  //     drink_pic: "https://dx5vpyka4lqst.cloudfront.net/products/251876/images/full.jpeg",
   //     user_name: 'a user',
-  //     user_rating: 3,
+  //     user_rating: 5,
   //     user_review: 'This is a test'
   // }).then(drinks => {
   //     console.log(drinks);
