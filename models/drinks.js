@@ -41,12 +41,12 @@ module.exports = function (sequelize, DataTypes) {
 
 
     Drinks.create({
-      drink_name: 'Tester',
+      drink_name: 'Wolf Blass Yellow Label Cabernet Sauvignon',
       tasting_note: 'A test',
-      drink_pic: 'A url',
-      user_name: 'a user',
-      user_rating: 3,
-      user_review: 'This is a test'
+      drink_pic: 'https://dx5vpyka4lqst.cloudfront.net/products/251876/images/full.jpeg',
+      user_name: 'Pele',
+      user_rating: 4,
+      user_review: 'Very versatile, delightfully drinkable, perfectly palatable'
   }).then(drinks => {
       console.log(drinks);
     });

@@ -78,6 +78,10 @@ button:hover  {
     .form-width {
         width: 90vw;
     }
+        .top-logo {
+        display:inline-block;
+        align-self:center;
+    }
 }
 
 .hide {
@@ -121,6 +125,10 @@ h1, h2 {
 
 .top-logo {
     max-width: 15%;
+}
+
+.fa-search{
+color:white;
 }
 
 
