@@ -22,8 +22,7 @@ function wineInfo() {
                 "class": "align-center result"
             });
             let $img = $("<img>", {
-                "class": "margin-auto top-drink-img",
-                "src": photo
+                "class": "margin-auto top-drink-img"
             });
             let $figCap = $("<figcaption>", {
                 "class": "result-name margin-auto"
@@ -37,6 +36,8 @@ function wineInfo() {
             let $userReview = $("<h3>", {
                 "class": "margin-auto"
             });
+
+            $($img).attr("src", photo);
 
 
             if (rating == 5){
