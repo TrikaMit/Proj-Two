@@ -9,8 +9,8 @@ module.exports = function (sequelize, DataTypes) {
         }
       },
       tasting_note: {
-        type: DataTypes.STRING,
-        allowNull: true,
+        type: DataTypes.TEXT,
+        allowNull: false,
       },
       drink_pic: {
         type: DataTypes.STRING,
@@ -38,7 +38,6 @@ module.exports = function (sequelize, DataTypes) {
         }
       }
     });
-
 
   //   Drinks.create({
   //     drink_name: 'Amazing wine',

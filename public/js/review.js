@@ -3,11 +3,11 @@ $(document).ready(function(){
         $('nav').toggleClass('hide');
 
     });
-    wineInfo();
+    topRated();
 });
 
 
-function wineInfo() {
+function topRated() {
     $.ajax({
         method: "GET",
         url: "/api/drinks"
@@ -38,7 +38,6 @@ function wineInfo() {
             });
 
             $($img).attr("src", photo);
-
 
             if (rating == 5){
                 $($figure).append($img);

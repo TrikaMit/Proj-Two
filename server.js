@@ -13,16 +13,6 @@ app.use(express.static('public'))
 require('./routes/api-routes')(app);
 require('./routes/html-routes')(app);
 
-// query will be the user input.
-// var query = 'Mill+Street+Organic'
-// request(`https://lcboapi.com/products?access_key=${process.env.ACCESS_KEY}&q=${query}`, { json: true }, (err, res, body) => {
-//   if (err) {
-//     return console.log(err)
-//   }
-//   console.log(body.result[0])
-// })
-
-
 db.sequelize.sync().then(function () {
     app.listen(PORT, function () {
         console.log('App listening on PORT ' + PORT);
