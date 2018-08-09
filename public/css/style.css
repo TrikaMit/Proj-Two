@@ -769,6 +769,10 @@ main {
   margin-top: 65px;
 }
 
+figcaption {
+  text-align: center;
+}
+
 .modal {
   position: fixed;
   z-index: 1;
