@@ -40,16 +40,16 @@ module.exports = function (sequelize, DataTypes) {
     });
 
 
-    Drinks.create({
-      drink_name: 'Wolf Blass Yellow Label Cabernet Sauvignon',
-      tasting_note: 'A test',
-      drink_pic: 'https://dx5vpyka4lqst.cloudfront.net/products/251876/images/full.jpeg',
-      user_name: 'Pele',
-      user_rating: 4,
-      user_review: 'Very versatile, delightfully drinkable, perfectly palatable'
-  }).then(drinks => {
-      console.log(drinks);
-    });
+  //   Drinks.create({
+  //     drink_name: 'Amazing wine',
+  //     tasting_note: 'A test',
+  //     drink_pic: "https://dx5vpyka4lqst.cloudfront.net/products/251876/images/full.jpeg",
+  //     user_name: 'a user',
+  //     user_rating: 5,
+  //     user_review: 'This is a test'
+  // }).then(drinks => {
+  //     console.log(drinks);
+  //   });
 
     return Drinks;
   };
