@@ -16,7 +16,7 @@
         "dialect": "mysql"
     },
     "production": {
-        // "use_env_variable": "DATABASE_URL",
+        
         "username": "test",
         "password": "password",
         "database": "database_production",
