@@ -16,9 +16,9 @@ module.exports = function(app) {
   app.get("/drinks", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/top-drinks.html"));
   });
-  app.get("/users", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/user-top-shelf.html"));
-  });
+  // app.get("/users", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/user-top-shelf.html"));
+  // });
 
 
 };
