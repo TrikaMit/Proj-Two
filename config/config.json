@@ -10,16 +10,16 @@
     "test": {
         "username": "test",
         "password": "password",
-        "database": "drinks",
+        "database": "database_test",
         "host": "127.0.0.1",
         "port": 3306,
         "dialect": "mysql"
     },
     "production": {
-        "use_env_variable": "DATABASE_URL",
+        // "use_env_variable": "DATABASE_URL",
         "username": "test",
         "password": "password",
-        "database": "drinks",
+        "database": "database_production",
         "host": "127.0.0.1",
         "port": 3306,
         "dialect": "mysql"
