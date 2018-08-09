@@ -16,8 +16,11 @@
         "dialect": "mysql"
     },
     "production": {
-        "use_env_variable": "DATABASE_URL",
-
+        "username": "test",
+        "password": "password",
+        "database": "drinks",
+        "host": "127.0.0.1",
+        "port": 3306,
         "dialect": "mysql"
     }
 }
